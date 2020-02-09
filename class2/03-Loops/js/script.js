@@ -2,8 +2,8 @@
 let rolled = Math.ceil( Math.random() * 6 );
 
 while (rolled <=3){
-  rolled = Math.ceil( Math.random() * 6 );
   console.log('number is ' + rolled);
+  rolled = Math.ceil( Math.random() * 6 );
 }
 
 if(rolled>3) { 
