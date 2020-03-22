@@ -11,4 +11,5 @@ function imgSearch(){
 
     img.src =src;
     document.getElementById("cat").appendChild(img);
+    console.log(img.src);
 }
