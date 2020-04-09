@@ -8,17 +8,17 @@ var articlenum=0;
 let xoff = 0.0;
 
 var input;
-
+//loadJSON
 function preload(){
     loadJSON(url, nytData);
 }
-
+//set canvas, count time
 function setup() {
   createCanvas(windowWidth-20,520);
   setInterval(increment,0);
   noiseSeed(99);
   stroke(0,5); 
-
+//set button default button value, search from GIF api by default setting "NY"
   var button = select('#submit');
   button.mousePressed(searching);
   input = select('#search');
@@ -27,14 +27,14 @@ function setup() {
   loadJSON(api,gotData)
   console.log(search);
 }
-
+//get button value, search from GIF api
 function searching(){
     search = input.value();
     console.log(search);
     var api = 'https://api.giphy.com/v1/gifs/search?api_key=ewf4zZN9CliGK0eGOLL5FESw09eg7q0p&q='+search+'&limit=25&offset=0&rating=G&lang=en'
     loadJSON(api,gotData);
   }
-
+//get article headline and publish date from NYT api
 function nytData(data){
   var articles = data.response.docs;
 
@@ -43,13 +43,13 @@ function nytData(data){
     date[k] = articles[k].pub_date;
     }
   }
-
+// draw background
   function draw() {
     background(255);
     
     xoff = xoff + 0.005
     let n = noise(xoff)*width;
-
+//draw a lot of line with noise
     fill(50);
     rect(10,10,windowWidth-40,500);
     stroke(255);
@@ -93,6 +93,7 @@ function nytData(data){
     strokeWeight(0.5);
     line(n/2+400, 0, n/2+400, height/6);
 
+// draw header
     fill(255);
     noStroke();
     textFont('Times New Roman')
@@ -101,6 +102,7 @@ function nytData(data){
     textAlign(LEFT);
     text('New York Times -',45,200);
 
+// draw article title from NYT api
     fill(255);
     noStroke();
     textFont('Times New Roman')
@@ -108,13 +110,13 @@ function nytData(data){
     textSize(45);
     textAlign(LEFT);
     text(titles[articlenum],45,250);
-
+// draw publish date from NYT api
     textSize(18);
     textFont('Courier New')
     textStyle(NORMAL);
     textAlign(LEFT);
     text(date[articlenum],45,300);
-
+// draw text
     textSize(18);
     textFont('Courier New')
     textStyle(BOLD);
@@ -122,10 +124,10 @@ function nytData(data){
     text('These are the article titles',1600,400);
     text('from New York Times Archive',1600,420);
     text('in December, 2019',1600,440);
-    
+//just color effect 
     filter(INVERT);
    }
-
+// let the article title loop 
    function increment(){
     articlenum++;
     if(articlenum == titles.length){
@@ -137,7 +139,7 @@ function nytData(data){
            articlenum=0;
        }
    }
-
+//draw the picture from giphy
 function gotData(giphy){
 
 console.log(giphy.data[1].images.original.url)
