@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="#" />
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="asset/video00-s.gif">
+    <link rel="preload" as="image" href="asset/video01-s.gif">
+    <link rel="preload" as="image" href="asset/video02-s.gif">
+    <link rel="preload" as="image" href="asset/video03-s.gif">
+    <link rel="preload" as="image" href="asset/video04-s.gif">
+    
+
+    <title>Prototype 03</title>
+    
+</head>
+<body>
+    <div class="header">
+        <h1 id="head">Slaping Hand Machine<span id="number" style="float:right">2020</span></h1> 
+        <h2 id="head2">Your body is here : </h2>
+        <p id = "status"></p>
+        <h3 id="lat" target="_blank" ></h3>
+        <h3 id="long" target="_blank"></h3>
+    </div>
+
+    <div class="container">
+        <img id="myVideo" class="video-js">
+            <source src="asset/video00-s.gif" alt="">
+        </img>
+        <audio id="myAudio" class="audio-js" >
+        <source src="asset/audio00.mp3" type="audio/mp3">
+        </audio>
+     </div>   
+
+     <div class="row" >
+            <div class="column side">
+                <h2> </h2>
+            </div>
+
+            <div id="buttonBox" class="column center">
+                <button id="enter" class="button" onclick="enterPressed()" onkeydown="keyPressed()" autofocus> ENTER </button>
+            </div>
+
+            <div class="column side">
+                <h2>  </h2>
+            </div>
+     </div>
+
+     <div class="location">
+        <h2 id="here">And I'm here : </h2>
+        <h3 id="here2" >Latitude: 25.07°</h3>
+        <h3 id="here3">Longitude: 121.59°</h3>
+        <h1 id="note">But those annoying things</h1>
+        <h1 id="note2">drive us crazy are the same.</h1>
+     </div>
+
+     <div class="footer">
+         <a href="https://taylorsu.info/" target="_blank">
+         <h3 id="foot" > taylorsu.info </h3>
+        </a>
+     </div>
+     
+    
+    <script src=js/script.js></script>
+</body>
+</html>

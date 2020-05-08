@@ -1,0 +1,237 @@
+body {
+    margin: 260px;
+    margin-top: 15px;
+    padding: 10px;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.header {
+    padding: 0px 25px;
+    text-align: left;
+  }
+
+.header h1 {
+    font-size: 45px;
+    font-family:'Libre Franklin', sans-serif;
+    margin-top: 10px ;
+    margin-bottom: 0px;
+    transition: 0.4s ;
+}
+
+#number {
+    font-size: 30px;
+    transition: 0.4s ;
+}
+
+.header h2 {
+    font-size: 22px;
+    margin-top: 30px ;
+    margin-bottom: 0px;
+    transition: 0.4s ;
+    line-height: 0.5cm;
+}
+
+.header h3 {
+    font-size: 16px;
+    margin-top: 5px ;
+    margin-bottom: 3px;
+    transition: 0.4s ;
+    color: white;
+    animation:blinkingText 1.7s infinite;
+}
+@keyframes blinkingText{
+    0%{ color: white;}
+    49%{ color: white;}
+    60%{ color: transparent;}
+    99%{ color: transparent;}
+    100%{ color: white;}
+}
+
+.location {
+    padding: 0 25px;
+    text-align: right;
+  }
+
+.location h2{
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    transition: 0.4s;
+}
+
+.location h3{
+    font-size: 16px;
+    font-weight: 350;
+    margin-top: 5px ;
+    margin-bottom: 3px;
+    transition: 0.4s;  
+}
+
+.location h1{
+    font-size: 38px;
+    margin-top: 40px;
+    margin-bottom: 0px;
+    line-height: 0.1cm;
+    transition: 0.4s;
+}
+
+.footer {
+    padding: 0 30px;
+    text-align: left;
+}
+
+.footer h3{
+    font-size: 16px;
+    transition: 0.4s;
+    user-select: none;
+}
+
+a:link{
+ text-decoration: none;
+ color:black;
+}
+
+a:visited{
+    text-decoration: none;
+    color:black;
+   }
+
+a:hover{
+    text-decoration: underline;
+    color:black;
+}
+
+.container{
+    padding: 0 20 20 20px;
+    margin-top: 0px;
+    transition: 0.4s;
+}
+
+#myVideo {
+    width: 58%;
+    transition: 1s;
+    border-radius: 5px;
+}
+
+.video-js{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;   
+}
+
+.column{
+    float: left;
+    padding: 10 0 0 0px; 
+}
+
+.column.side {
+    width: 40%;
+}
+
+.column.center {
+    width: 20%;
+    margin-top: 0px;
+}
+
+.row {
+    text-align: right;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.button {
+    width: 100%;
+    background-color: #2e2e2e;
+    display: inline-block;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 5 10px;
+    opacity: 0.6;
+    transition: 1s;
+    text-align: center;
+    font-family:'Libre Franklin', sans-serif;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.button:hover{
+    opacity: 1;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.column.center:active{
+    transform: translateY(4px);
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 800px){
+    body {
+        margin: 70px;
+        margin-top: 10px;
+        padding: 25 2px;
+    }
+    #myVideo {
+        width: 65%;
+        border-radius: 10px;
+    }
+    .footer {
+        padding: 60 30px ;
+    }
+    .container{
+        margin-top: 40px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    body {
+        margin: 0;
+        padding: 25 2px;
+    }
+    .header {
+        padding: 0 30px;
+    }
+    .header h1{
+        font-size: 30px;
+    }
+    .header h2 {
+        line-height: 0.3cm;
+    }
+    #number {
+        font-size: 30px;
+    }
+    .container{
+        margin-top: 60px;
+    }
+    .button{
+        font-size: 15px;
+        border-radius: 5px;
+        }
+    .column.center{
+        margin-top: 10px;
+    }
+    .footer {
+        padding: 100 30px ;
+    }
+    .footer h2{
+        font-size: 14px;
+        padding: 50 10 0 0px;
+    }
+    #myVideo {
+        width: 95%;
+        border-radius: 10px;
+    }
+    .location h1{
+        font-size: 30px;
+        margin-top: 35px ;
+        margin-bottom: 0px;
+        line-height: 0cm;
+    }
+}
