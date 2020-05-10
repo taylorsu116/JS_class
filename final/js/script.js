@@ -12,8 +12,8 @@ let i;
 let text;  
 
 //gif, audio
-const vids = ["asset/video00-s.gif","asset/video01-s.gif","asset/video02-s.gif", "asset/video03-s.gif", "asset/video04-s.gif", "asset/bubble01.gif", "asset/bubble02.gif", "asset/bubble03.gif", "asset/bubble04.gif"];
-const audio = ["asset/audio00.mp3", "asset/audio01.mp3", "asset/audio02.mp3", "asset/audio03.mp3", "asset/audio04.mp3", "asset/audio_bubble01.mp3", "asset/audio_bubble02.mp3", "asset/audio_bubble03.mp3", "asset/audio_bubble04_2.mp3"];
+const vids = ["asset/video00_2.gif","asset/video01-s.gif","asset/video02-s.gif", "asset/video03-s.gif", "asset/video04-s.gif", "asset/bubble01.gif", "asset/bubble02.gif", "asset/bubble03.gif", "asset/bubble04_4.gif"];
+const audio = ["asset/audio00_2.mp3", "asset/audio01.mp3", "asset/audio02.mp3", "asset/audio03.mp3", "asset/audio04.mp3", "asset/audio_bubble01.mp3", "asset/audio_bubble02.mp3", "asset/audio_bubble03.mp3", "asset/audio_bubble04_4.mp3"];
 let vidPlaying = 0;
 let audioPlaying = 0;
 
